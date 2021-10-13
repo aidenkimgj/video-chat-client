@@ -4,12 +4,12 @@ import { Chat, Main } from '../page';
 
 const Router = () => {
   return (
-    <>
+    <div id="main">
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/chat" exact component={Chat} />
       </Switch>
-    </>
+    </div>
   );
 };
 
