@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Button } from 'reactstrap';
 
-const Chat = () => {
+let socket;
+
+const Chat = ({ location }) => {
   return (
     <>
-      <h1>Chat</h1>
+      <div className="call">
+        <div className="my_stream">
+          <video className="my_face" autoPlay playsInline />
+        </div>
+        <div className="peer_stream">
+          <video className="peer_face" autoPlay playsInline />
+        </div>
+        <Button className="mute">Mute</Button>
+        <Button className="camera">Turn Camera Off</Button>
+      </div>
     </>
   );
 };
